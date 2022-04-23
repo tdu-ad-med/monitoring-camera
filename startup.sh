@@ -7,4 +7,5 @@ ffmpeg \
 	drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf: \
 	x=10:y=10:fontsize=24:fontcolor=white@1:text='%{pts}' \
 	" \
-	-f flv rtmp://10.0.0.1/live/<VPN接続の認証に用いるユーザー名>
+	-f flv -rw_timeout 2000000 \
+	rtmp://10.0.0.1/live/<VPN接続の認証に用いるユーザー名>
